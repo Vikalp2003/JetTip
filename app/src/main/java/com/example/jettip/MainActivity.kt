@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
             JetTipTheme {
                 MyApp {
 //                    TopHeader()
-                    MainContent()
+//                    MainContent()
                 }
             }
         }
