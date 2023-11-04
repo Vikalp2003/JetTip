@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
             JetTipTheme {
                 MyApp {
 //                    TopHeader()
-//                    MainContent()
+                    MainContent()
                 }
             }
         }
@@ -93,6 +93,15 @@ fun GreetingPreview() {
 @Preview
 @Composable
 fun MainContent(){
+
+}
+
+@OptIn(ExperimentalComposeUiApi::class)
+@Composable
+fun BillForm(modifier: Modifier=Modifier,
+             onValChange: (String)->Unit={},
+
+             ){
     val totalBillsState = remember {
         mutableStateOf("")
     }
@@ -100,6 +109,7 @@ fun MainContent(){
         totalBillsState.value.trim().isNotEmpty()
     }
     val keyboardController = LocalSoftwareKeyboardController.current
+
     Surface(modifier = Modifier
         .padding(2.dp)
         .fillMaxWidth(),
@@ -117,7 +127,9 @@ fun MainContent(){
 
                     keyboardController?.hide()
                 })
-                )
+            )
         }
+
     }
+
 }
