@@ -117,17 +117,17 @@ fun BillForm(modifier: Modifier=Modifier,
         border = BorderStroke(width = 1.dp, color = Color.LightGray)
     ) {
         Column {
-            InputField(valueState = totalBillsState,
-                labelId = "Enter Bill",
-                enabled =true ,
-                isSingleLine =true,
-                onAction = KeyboardActions({
-                    if(!validState) return@KeyboardActions
-                    //Todo- onvaluedchanged
-
-                    keyboardController?.hide()
-                })
-            )
+//            InputField(valueState = totalBillsState,
+//                labelId = "Enter Bill",
+//                enabled =true ,
+////                isSingleLine =true,
+////                onAction = KeyboardActions({
+////                    if(!validState) return@KeyboardActions
+////                    //Todo- onvaluedchanged
+////
+////                    keyboardController?.hide()
+////                })
+//            )
         }
 
     }
